@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <input type="text" id="mytext" class="form-control" value="" />
+    <button id="btntext" class="btn btn-success">Show My Text</button>
+    <h1 id="wcmsg" class="display-4">Welcome to ASP.NET Core MVC Course</h1>
+    <h2 id="msg" class="alert alert-info">A lot of exciting things awaits for you</h2>
+</div>
+
+@section Scripts{ 
+<script>
+    $(document).ready(function () {
+        $("#btntext").click(function () {
+            var m = $("#mytext").val();
+            $("#wcmsg").html(m);
+            $("#wcmsg").hide();
+            $("#wcmsg").fadeIn(5000);
+            $("#msg").show();
+            $("#msg").fadeOut(5000);
+        });
+
+    });
+</script>
+}
